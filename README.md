@@ -21,6 +21,7 @@ Run the project by simply typing
 electron .
 ```
 A page should spawn looking as follows:
+
 ![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/jsPython.png)
 
 Than, press: 
