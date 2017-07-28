@@ -27,14 +27,22 @@ A page should spawn looking as follows:
 Than, press: 
 ```
 LAUNCH PYTHON CODE
+~ this will launch a python application with a loop inside,
+  that is waiting for data to be send from js ~
 ```
+
 And afterwards press: 
 ```
 INTERACT WITH PYTHON CODE
+~ this will send a message named "hello" from js to python
+  and python will read it and print a message ~
 ```
 And in the end press 
 ```
 TERMINATE PYTHON CODE
+~ finally js will send a termination message "exit" to python
+  and python will terminate and than js will terminate python
+  so that no processes run in the backround ~
 ```
 
 ## Interpretation Guide
