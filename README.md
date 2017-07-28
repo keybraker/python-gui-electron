@@ -22,7 +22,7 @@ And run the project by simply typing
 electron .
 ```
 You than will be greated with a page looking as follows
-![alt text](https://raw.githubusercontent.com/keybraker/Lexical-Grammatical-Analyzer-for-Greek/master/greely%20logo.png)
+![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/jsPython.png)
 
 You should than press 
 ```
