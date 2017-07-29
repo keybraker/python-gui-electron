@@ -3,7 +3,7 @@ A simple representation for  creating an electron GUI for a python program and i
 
 ## Installation Guide
 
-Make sure you have installed [electron](https://electron.atom.io) ( Mac OS or Linux / Windows shoukldn't work )
+Make sure you have installed [electron](https://electron.atom.io) ( Mac OS or Linux / Windows shouldn't work )
 
 Clone this repository with:
 ```
