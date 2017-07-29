@@ -24,7 +24,7 @@ A page should spawn looking as follows:
 
 ![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/jsPython.png)
 
-Than, press: 
+Then, press: 
 ```
 LAUNCH PYTHON CODE
 ~ this will launch a python application with a loop inside,
