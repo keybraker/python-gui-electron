@@ -46,11 +46,8 @@ function launchPython(evt) {
 
     child.stdin.write("hello\n");
     //this is a listener for peers output
-    child.stdout.on('data', function(data) {
-      var nodeConsole = require('console');
-      var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-      myConsole.log('\x1b[36m%s\x1b[0m','PIPED FROM PYTHON PROGRAM: ' + data.toString()); 
-    });
+    myConsole.log('\x1b[36m%s\x1b[0m','PIPED FROM PYTHON PROGRAM: ' + data.toString()); 
+    
 
 
 
@@ -69,12 +66,10 @@ function launchPython(evt) {
 
     child.stdin.write("exit\n");
     //this is a listener for peers output
-    child.stdout.on('data', function(data) {
-      var nodeConsole = require('console');
-      var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-      myConsole.log('\x1b[36m%s\x1b[0m','PIPED FROM PYTHON PROGRAM: ' + data.toString()); 
-    });
+    myConsole.log('\x1b[36m%s\x1b[0m','PIPED FROM PYTHON PROGRAM: ' + data.toString()); 
+
     child.stdin.end();
+    
     var nodeConsole = require('console');
     var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
     myConsole.log('python terminated from js too');
