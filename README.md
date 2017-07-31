@@ -50,7 +50,7 @@ TERMINATE PYTHON CODE
 
 After that you should open jsExample.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
 
-### Versions used to achieve communication are the following
+## Versions used to achieve communication are the following
 
 
 [Python](https://www.python.org/downloads/) Version: 2.7.10
