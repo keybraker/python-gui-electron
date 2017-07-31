@@ -49,3 +49,10 @@ TERMINATE PYTHON CODE
 ## Interpretation Guide
 
 After that you should open jsExample.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
+
+### Versions used to achieve communication is as follows
+
+
+[Python](https://www.python.org/downloads/) Version: 2.7.10
+
+[Electron](https://electron.atom.io) Version: 1.4.13
