@@ -1,4 +1,5 @@
-# electron-GUI-for-python
+# Electron GUI for Python
+
 A simple representation for  creating an electron GUI for a python program and interacting with it.
 
 ## Installation Guide
