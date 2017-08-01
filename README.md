@@ -54,8 +54,3 @@ After that you should open jsExample.js and pythonExample.js in order to see how
 
 [![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
 [![Electron Version](https://img.shields.io/badge/Electorn-1.4.13-blue.svg)](https://electron.atom.io)
-
-
-## Contact me at
-
-[![Twitter](https://img.shields.io/badge/Twitter-11-blue.svg)](https://twitter.com/keybr4ker?lang=en)
