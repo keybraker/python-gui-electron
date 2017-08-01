@@ -52,7 +52,5 @@ After that you should open jsExample.js and pythonExample.js in order to see how
 
 ## Versions used to achieve communication are the following
 
-
-[Python](https://www.python.org/downloads/) Version: 2.7.10
-
-[Electron](https://electron.atom.io) Version: 1.4.13
+[![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
+[![Electron Version](https://img.shields.io/badge/Electorn-1.4.13-blue.svg)](https://electron.atom.io)
