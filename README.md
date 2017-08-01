@@ -42,7 +42,7 @@ And in the end press
 ```
 TERMINATE PYTHON CODE
 ~ finally js will send a termination message "exit" to python
-  and python will terminate and than js will terminate python
+  and python will terminate and then js will terminate python
   so that no processes run in the backround
 ```
 
