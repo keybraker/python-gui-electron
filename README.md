@@ -54,3 +54,6 @@ After that you should open jsExample.js and pythonExample.js in order to see how
 
 [![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
 [![Electron Version](https://img.shields.io/badge/Electorn-1.4.13-blue.svg)](https://electron.atom.io)
+[![OSX Version](https://img.shields.io/badge/OS%20X-10.12.5-red.svg)](https://www.apple.com/lae/macos/sierra/)
+
+
