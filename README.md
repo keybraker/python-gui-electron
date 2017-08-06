@@ -28,6 +28,7 @@ terminal with js talking to python and python answering the requests which js li
 ```text
 .
 |-- ui.html
+|-- jsExample.css
 |-- jsExample.js
 |-- package.json
 |-- main.js
