@@ -2,14 +2,59 @@
 
 A simple representation for  creating an electron GUI for a python program and interacting with it.
 
+## How does it work ( simple representation )
+
+```text
+electron
+--------> |------------|
+          |            |    python
+          |            |-------------> |-------------------|
+          |  electron  |  sub process  | python program    |
+          |  --------  |               | --------------    |
+          |   > html   |      std      |  takes requests   |
+          |   > css    | <-----------> |  from js and      |
+          |   > js     | communication |  respons to them  |
+          |            |               |  in terminal      |
+          |            |               |                   |
+          |------------|               |-------------------|
+```
+
+Essentially no network is being created only one terminal is used when electron is launched and than from 
+within js ( electron ) a python program is initiated as a subprocess. These two programs than communicate via
+terminal with js talking to python and python answering the requests which js listens too.
+
+## Structure of example
+
+```text
+.
+|-- ui.html
+|-- jsExample.js
+|-- package.json
+|-- main.js
+|
+|-- jsPython.png
+|
+|-- pythonExample.py
+|
+`-- README.md
+```
+
 ## Installation Guide
 
-Make sure you have installed [electron](https://electron.atom.io) ( Mac OS or Linux / Windows shouldn't work )
+1. To download and install [electron](https://electron.atom.io) ( OS X or Linux ) you have to download it from [npm-electron](https://www.npmjs.com/package/electron) using :
 
-Clone this repository with:
-```
-git clone https://github.com/keybraker/electron-GUI-for-python.git
-```
+   ```
+   npm install electron --save-dev
+   ```
+   ```
+   npm install -g electron
+   ```
+   ( if you don't have npm installed use this link to download it [npm](https://nodejs.org/en/download/) )
+
+2. Clone this repository with ( or download zip ):
+   ```
+   git clone https://github.com/keybraker/electron-GUI-for-python.git
+   ```
 
 ## Execution Guide
 
