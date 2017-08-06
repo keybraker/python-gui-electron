@@ -37,7 +37,7 @@ terminal with js talking to python and python answering the requests which js li
 |
 |-- pythonExample.py
 |
-`-- README.md
+'-- README.md
 ```
 
 ## Installation Guide
@@ -50,7 +50,7 @@ terminal with js talking to python and python answering the requests which js li
    ```
    npm install -g electron
    ```
-   ( if you don't have npm installed use this link to download it [npm](https://nodejs.org/en/download/) )
+   ( if you don't have npm installed use this [link](https://nodejs.org/en/download/) to download it. )
 
 2. Clone this repository with ( or download zip ):
    ```
