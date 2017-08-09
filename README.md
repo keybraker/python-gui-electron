@@ -96,6 +96,10 @@ TERMINATE PYTHON CODE
 
 After that you should open jsExample.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
 
+## Authors
+
+* **Ioannis Tsiakkas** - *(Keybraker)* - [Keybraker](https://github.com/keybraker)
+
 ## Versions used to achieve communication are the following
 
 [![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
