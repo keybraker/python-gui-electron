@@ -6,8 +6,7 @@ A simple representation for  creating an electron GUI for a python program and i
 
 ```text
 electron
---------> |------------|
-          |            |    python
+--------> |------------|    python
           |            |-------------> |-------------------|
           |  electron  |  sub process  | python program    |
           |  --------  |               | --------------    |
