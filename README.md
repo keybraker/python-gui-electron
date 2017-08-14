@@ -15,7 +15,6 @@ electron
           |   > css    | <-----------> |  from js and      |
           |   > js     | communication |  respons to them  |
           |            |               |  in terminal      |
-          |            |               |                   |
           |------------|               |-------------------|
 ```
 
