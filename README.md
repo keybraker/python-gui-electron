@@ -24,18 +24,18 @@ terminal with js talking to python and python answering the requests which js li
 ## Structure of example
 
 ```text
-.
-|-- ui.html
-|-- jsExample.css
-|-- jsExample.js
-|-- package.json
-|-- main.js
-|
-|-- jsPython.png
-|
-|-- pythonExample.py
-|
-'-- README.md
+│ 
+├── ui.html
+├── jsExample.css
+├── jsExample.js
+├── package.json
+├── main.js
+│ 
+├── jsPython.png
+│ 
+├── pythonExample.py
+│ 
+└── README.md
 ```
 
 ## Installation Guide
@@ -101,7 +101,7 @@ After that you should open jsExample.js and pythonExample.js in order to see how
 ## Versions used to achieve communication are the following
 
 [![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
-[![Electron Version](https://img.shields.io/badge/Electorn-1.4.13-blue.svg)](https://electron.atom.io)
-[![OSX Version](https://img.shields.io/badge/OS%20X-10.12.5-red.svg)](https://www.apple.com/lae/macos/sierra/)
+[![Electron Version](https://img.shields.io/badge/electron-v1.7.8-green.svg)](https://electron.atom.io)
+[![OSX Version](https://img.shields.io/badge/OS%20X-v10.13-green.svg)](https://www.apple.com/lae/macos/high-sierra/)
 
 
