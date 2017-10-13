@@ -31,6 +31,8 @@ terminal with js talking to python and python answering the requests which js li
 ├── package.json
 ├── main.js
 │ 
+├── config.json
+│ 
 ├── jsPython.png
 │ 
 ├── pythonExample.py
@@ -89,7 +91,14 @@ TERMINATE PYTHON CODE
   and python will terminate and then js will terminate python
   so that no processes run in the backround
 ```
-
+Also if you want to access externals files
+there is one more example
+```
+HOW TO OPEN A FILE
+~ from jsExample.js an ipc.send message is sent to the main.js
+  which will then read and output config.json's values.
+  (This is a very fast and usefull feature to store settings)
+```
 ## Interpretation Guide
 
 After that you should open jsExample.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
