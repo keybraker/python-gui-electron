@@ -78,7 +78,7 @@ LAUNCH PYTHON CODE
   that is waiting for data to be send from js
 ```
 
-And afterwards press: 
+Afterwards press: 
 ```
 INTERACT WITH PYTHON CODE
 ~ this will send a message named "hello" from js to python
