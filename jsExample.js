@@ -1,8 +1,39 @@
 var path = require('path');
+const ipc = require('electron').ipcRenderer;
 
 var sys = require('sys');
 var exec = require('child_process').exec;
 var child;
+
+
+
+
+
+
+
+function jsonForSettingsUse(evt) {
+    
+  if(evt.srcElement.id == "json"){
+
+    var nodeConsole = require('console');
+    var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
+    myConsole.log('\x1b[34m%s\x1b[0m','THIS IS HOW TO READ A FILE IN JS');
+    myConsole.log('\x1b[34m%s\x1b[0m','RIGHT KNOW I AM IN jsExample.js');
+
+    ipc.send('openJsonFile');
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
 function launchPython(evt) {
   
@@ -47,7 +78,7 @@ function launchPython(evt) {
     child.stdin.write("hello\n");
     //this is a listener for peers output
     myConsole.log('\x1b[36m%s\x1b[0m','PIPED FROM PYTHON PROGRAM: ' + data.toString()); 
-    
+
 
 
 
@@ -78,8 +109,12 @@ function launchPython(evt) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
   document.getElementById("htmlButtonPress").addEventListener("click", launchPython);
   document.getElementById("interact").addEventListener("click", launchPython);
   document.getElementById("exit").addEventListener("click", launchPython);
+
+  document.getElementById("json").addEventListener("click", jsonForSettingsUse);
+
 })
 
