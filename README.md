@@ -37,6 +37,7 @@ terminal with js talking to python and python answering the requests which js li
 │ 
 ├── pythonExample.py
 │ 
+├── LICENSE
 └── README.md
 ```
 
