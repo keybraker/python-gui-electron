@@ -1,6 +1,6 @@
 # Electron GUI for Python
 
-A simple representation for  creating an electron GUI for a python program and interacting with it.
+A simple representation for creating an electron GUI for a python program and interacting with it.
 
 ## How does it work ( simple representation )
 
