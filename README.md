@@ -1,6 +1,6 @@
 # Electron GUI for Python
 
-A simple representation for creating an electron GUI for a python program and interacting with it.
+A simple example on how to create an electron GUI for a python program and interacting with it.
 
 ## How does it work ( simple representation )
 
@@ -12,14 +12,14 @@ electron
           |  --------  |               | --------------    |
           |   > html   |      std      |  takes requests   |
           |   > css    | <-----------> |  from js and      |
-          |   > js     | communication |  respons to them  |
-          |            |               |  in terminal      |
+          |   > js     | communication |  responds it,     |
+          |            |               |  in the terminal  |
           |------------|               |-------------------|
 ```
 
 Essentially no network is being created only one terminal is used when electron is launched and than from 
 within js ( electron ) a python program is initiated as a subprocess. These two programs than communicate via
-terminal with js talking to python and python answering the requests which js listens too.
+the terminal with js talking to python and python answering the requests which js listens too.
 
 ## Structure of example
 
@@ -113,5 +113,3 @@ After that you should open jsExample.js and pythonExample.js in order to see how
 [![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
 [![Electron Version](https://img.shields.io/badge/electron-v1.7.8-green.svg)](https://electron.atom.io)
 [![OSX Version](https://img.shields.io/badge/OS%20X-v10.13-green.svg)](https://www.apple.com/lae/macos/high-sierra/)
-
-
