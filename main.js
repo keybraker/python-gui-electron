@@ -10,7 +10,9 @@ app.on('ready', () => {
 	var ui = new BrowserWindow({
 		height: 450,
 		width: 600,
-		resizable: false
+		resizable: false,
+		nodeIntegration: true, // small fix for electron version 5.0.0 will update repo without nodeInt
+		nodeIntegrationInWorker: true
 	});
 	ui.loadURL('file://' + __dirname + '/ui.html');
 
