@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+
+    <title>Electron Program Interaction</title>
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="gui_example.css">
+    <script src="gui_example.js"></script>
+
+</head>
+
+<body>
+
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">INTERFACE</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">INFO</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+
+                    <div class="group">
+                        <input id="start_code" type="submit" class="button" value="launch program">
+                    </div>
+                    <div class="input-container">
+                        <input id="string_to_send" type="text" required="" placeholder="enter the string to send to program" />
+                    </div>
+                    <div class="group">
+                        <input id="send_code" type="submit" class="button" value="interact with program">
+                    </div>
+                    <div class="group">
+                        <input id="stop_code" type="submit" class="button" value="terminate program">
+                    </div>
+
+                    <div class="group">
+                        <input id="open_file" type="submit" class="button" value="how to open a file">
+                    </div>
+
+                    <div class="foot-lnk">
+                        <a href="#forgot">Made by Keybraker @ 2017 - 2020</a>
+                    </div>
+
+                </div>
+                <div class="sign-up-htm">
+
+                    <label for="user" class="label">
+                        This is a simple example on how to use electron as a GUI for any language.<br>
+					</label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

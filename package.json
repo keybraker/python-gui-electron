@@ -1,8 +1,8 @@
 {
-  "name": "your-app",
-  "version": "0.1.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  }
+    "name": "electron-gui-for-anything",
+    "version": "0.1.0",
+    "main": "./electron/main.js",
+    "scripts": {
+        "start": "electron ."
+    }
 }
