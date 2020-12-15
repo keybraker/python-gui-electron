@@ -72,7 +72,7 @@ electron .
 ```
 A page should spawn looking as follows:
 
-![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/example.png)
+![alt text](../img/example.png)
 
 Then, press: 
 ```
@@ -112,6 +112,8 @@ After that you should open js_example.js and pythonExample.js in order to see ho
 
 ## Versions used to achieve communication are the following
 
-[![Python Version](https://img.shields.io/badge/Python-2.7.13-green.svg)](https://www.python.org/downloads/)
-[![Electron Version](https://img.shields.io/badge/electron-v1.7.8-green.svg)](https://electron.atom.io)
-[![OSX Version](https://img.shields.io/badge/OS%20X-v10.13-green.svg)](https://www.apple.com/lae/macos/high-sierra/)
+[![Python 2 Version](https://img.shields.io/badge/Python-2.7.16-green.svg)](https://www.python.org/downloads/)
+[![Python 3 Version](https://img.shields.io/badge/Python-3.9.1-green.svg)](https://www.python.org/download/releases/3.0/)
+[![Electron Version](https://img.shields.io/badge/electron-v11.1.0-green.svg)](https://electron.atom.io)
+[![OSX Version](https://img.shields.io/badge/OS%20X-v11.0.1-green.svg)](https://www.apple.com/lae/macos/big-sur/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.0.4-green.svg)](https://ubuntu.com)
