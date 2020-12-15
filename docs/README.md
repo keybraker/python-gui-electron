@@ -25,20 +25,22 @@ the terminal with js talking to python and python answering the requests which j
 
 ```text
 │ 
-├── ui.html
-├── jsExample.css
-├── jsExample.js
-├── package.json
+├── docs
+│   ├── README.md
+│   └── LICENSE
+|
+├── img
+│   └── example.png
+|
+├── gui_example.html
+├── gui_example.css
+├── gui_example.js
 ├── main.js
 │ 
+├── python_example.py
+| 
 ├── config.json
-│ 
-├── jsPython.png
-│ 
-├── pythonExample.py
-│ 
-├── LICENSE
-└── README.md
+└── package.json
 ```
 
 ## Installation Guide
@@ -70,7 +72,7 @@ electron .
 ```
 A page should spawn looking as follows:
 
-![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/jsPython.png)
+![alt text](https://raw.githubusercontent.com/keybraker/electron-GUI-for-python/master/example.png)
 
 Then, press: 
 ```
