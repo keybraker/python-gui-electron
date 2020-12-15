@@ -21,7 +21,7 @@ Essentially no network is being created only one terminal is used when electron 
 within javascript ( electron ) a python program is initiated as a subprocess.
 These two programs than communicate via standart streams.
 
-###Versions used to achieve communication are the following
+### Tested on
 
 [![Python 2 Version](https://img.shields.io/badge/Python-2.7.16-green.svg)](https://www.python.org/downloads/)
 [![Python 3 Version](https://img.shields.io/badge/Python-3.9.1-green.svg)](https://www.python.org/download/releases/3.0/)
