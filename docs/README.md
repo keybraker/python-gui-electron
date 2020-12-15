@@ -21,7 +21,15 @@ Essentially no network is being created only one terminal is used when electron 
 within javascript ( electron ) a python program is initiated as a subprocess.
 These two programs than communicate via standart streams.
 
-## Structure of example
+###Versions used to achieve communication are the following
+
+[![Python 2 Version](https://img.shields.io/badge/Python-2.7.16-green.svg)](https://www.python.org/downloads/)
+[![Python 3 Version](https://img.shields.io/badge/Python-3.9.1-green.svg)](https://www.python.org/download/releases/3.0/)
+[![Electron Version](https://img.shields.io/badge/electron-v11.1.0-green.svg)](https://electron.atom.io)
+[![OSX Version](https://img.shields.io/badge/OS%20X-v11.0.1-green.svg)](https://www.apple.com/lae/macos/big-sur/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.0.4-green.svg)](https://ubuntu.com)
+
+### Structure of example
 
 ```text
 │ 
@@ -62,58 +70,46 @@ These two programs than communicate via standart streams.
 
 ## Execution Guide
 
-Open a terminal window and cd to cloned project
+1. Open a terminal window and cd to cloned project
 ```
-cd .../electron-GUI-for-python
+cd electron-GUI-for-python
 ```
-Run the project by simply typing
+
+2. Initialize the elcetron aplication (first-time)
 ```
-electron .
+npm i
 ```
-A page should spawn looking as follows:
+
+3. Run the electron application
+```
+npm start
+```
+
+4. A page should spawn looking as follows:
 
 ![alt text](../img/example.png)
 
-Then, press: 
-```
-LAUNCH PROGRAM
-~ this will launch a python application with a loop inside,
+1. Press ```LAUNCH PROGRAM``` button
+> this will launch a python application with a loop inside,
   that is waiting for data to be send from js
-```
 
-Afterwards press: 
-```
-INTERACT WITH PROGRAM
-~ this will send a message named "hello" from js to python
+2. Press ```INTERACT WITH PROGRAM``` button
+> this will send a message named "hello" from js to python
   and python will read it and print a message
-```
 
-And in the end press 
-```
-TERMINATE PROGRAM
-~ a termination message ("terminate") is sent to the program which knows
+3. Press ```TERMINATE PROGRAM``` button
+> a termination message ("terminate") is sent to the program which knows
 to stop the loop and execution
-```
 
-Also if you want to access externals files there is one more example
-```
-HOW TO OPEN A FILE
-~ from js_example.js an ipc.send message is sent to the main.js
-  which will then read and output config.json's values.
+4. Press ```HOW TO OPEN A FILE``` button
+> from ```electron/gui_example.js``` an ipc.send message is sent to the main.js
+  which will then read and output ```config.json``` values.
   (This is a very fast and usefull feature to store settings)
-```
-## Interpretation Guide
 
-After that you should open js_example.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
+### Interpretation Guide
+
+Important functionality can be found in files ```electron/gui_example.js``` where the core of electron is. Listeners are implemented there awaiting for click events to trigger initialization of program, communication and termination. The program ```external_programs/python_example.py``` which is the external or 3rd party application that electron calls, is a simple for-loop awaiting commands. It responds to commands and terminates when sent an empty string, "terminate" or by pressing the terminate program button.
 
 ## Authors
 
 * **Ioannis Tsiakkas** - *(Keybraker)* - [Keybraker](https://github.com/keybraker)
-
-## Versions used to achieve communication are the following
-
-[![Python 2 Version](https://img.shields.io/badge/Python-2.7.16-green.svg)](https://www.python.org/downloads/)
-[![Python 3 Version](https://img.shields.io/badge/Python-3.9.1-green.svg)](https://www.python.org/download/releases/3.0/)
-[![Electron Version](https://img.shields.io/badge/electron-v11.1.0-green.svg)](https://electron.atom.io)
-[![OSX Version](https://img.shields.io/badge/OS%20X-v11.0.1-green.svg)](https://www.apple.com/lae/macos/big-sur/)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.0.4-green.svg)](https://ubuntu.com)
