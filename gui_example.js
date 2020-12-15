@@ -4,8 +4,13 @@ var child;
 var nodeConsole = require('console');
 var my_console = new nodeConsole.Console(process.stdout, process.stderr);
 
+function print_both(str) {
+    console.log('Javascript: ' + str);
+    my_console.log('Javascript: ' + str);
+}
+
 function start_code_function(evt) {
-    console.log('\x1b[34m%s\x1b[0m', 'PRINT BEFORE PYTHON EXEC FROM NODE.JS');
+    print_both('Inside gui_example.js initiating code');
 
     // EXECUTION OF PYTHON
 
@@ -13,49 +18,46 @@ function start_code_function(evt) {
         //sys.print('stdout: ' + stdout); 
         //sys.print('stderr: ' + stderr); 
         if (error !== null) {
-            console.log('exec error: ' + error);
+            print_both('exec error: ' + error);
         }
     });
 
-    //this is a listener for peers output
     child.stdout.on('data', function(data) {
-
-        console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
+        print_both('Following data has been piped from python execution: ' + data.toString());
     });
 }
 
 function send_code_function(evt) {
-    console.log('\x1b[34m%s\x1b[0m', 'INTERACTION IN JS');
-    child.stdin.write("hello\n");
-    //this is a listener for peers output
-    console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
+    let string_to_send = document.getElementById("string_to_send").value;
+    print_both('Inside gui_example.js sending "' + string_to_send + '" to code:');
+    child.stdin.write(string_to_send);
+
+    child.stdout.on('data', function(data) {
+        print_both('Following data was returned from python: ' + data.toString());
+    });
 }
 
 
 function stop_code_function(evt) {
-    console.log('\x1b[34m%s\x1b[0m', 'EXIT IN JS');
+    child.stdin.write("terminate");
+    print_both('Terminated python code');
 
-    child.stdin.write("exit\n"); //this is a listener for peers output
-    console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
+    child.stdout.on('data', function(data) {
+        print_both('Following data was returned from python: ' + data.toString());
+    });
 
     child.stdin.end();
-
-    console.log('python terminated from js too');
+    print_both('Closed pipe from js to python');
 }
 
 function open_file_function(evt) {
     if (evt.srcElement.id == "json") {
-
-        console.log('\x1b[34m%s\x1b[0m', 'THIS IS HOW TO READ A FILE IN JS');
-        console.log('\x1b[34m%s\x1b[0m', 'RIGHT KNOW I AM IN js_example.js');
-
+        print_both('From gui_example.js sending a request to main.js via ipc');
         ipc.send('openJsonFile');
-
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("pressed a button");
     document.getElementById("start_code").addEventListener("click", start_code_function);
     document.getElementById("send_code").addEventListener("click", send_code_function);
     document.getElementById("stop_code").addEventListener("click", stop_code_function);

@@ -4,7 +4,10 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>JS & Python interaction</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+
+    <title>Electron Program Interaction</title>
 
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
     <link rel="stylesheet" href="gui_example.css">
@@ -23,6 +26,9 @@
 
                     <div class="group">
                         <input id="start_code" type="submit" class="button" value="launch python code">
+                    </div>
+                    <div class="input-container">
+                        <input id="string_to_send" type="text" required="" placeholder="enter the string to send to code" />
                     </div>
                     <div class="group">
                         <input id="send_code" type="submit" class="button" value="interact with python code">

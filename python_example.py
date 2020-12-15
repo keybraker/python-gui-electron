@@ -2,14 +2,18 @@ import sys
 
 # FUNCTIONS
 
+
+def my_print(str):
+	print('Python:     ' + str)
+
 def start():
-	print 'I STARTED FROM WITHIN NODE.JS'
+	my_print('Spawned from within electron (js)')
 
-def respond():
-	print 'I GOT hello FROM NODE.JS -> HI THERE EXAMPLE ANALYZER'
+def respond(line):
+	my_print('I got string: "' + line + '", from electron (js)')
 
-def ender():
-	print 'I GOT exit FROM NODE.JS -> I STOPPED FROM WITHIN NODE.JS'
+def terminate():
+	my_print('I got a terminate request from electron (js)...terminating')
 	exit()
 
 
@@ -19,9 +23,6 @@ start()
 
 while True:
     line = sys.stdin.readline()
-    if line == "exit\n":
-    	ender()
-    elif line == "hello\n":
-    	respond()
-    else:
-    	print 'dunno'
+    if line == "terminate":
+        terminate()
+    respond(line)
