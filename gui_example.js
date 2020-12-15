@@ -1,47 +1,25 @@
-var path = require('path');
 const ipc = require('electron').ipcRenderer;
-
-var sys = require('sys');
 var exec = require('child_process').exec;
 var child;
-
-
-
-
-
-
+var nodeConsole = require('console');
+var my_console = new nodeConsole.Console(process.stdout, process.stderr);
 
 function jsonForSettingsUse(evt) {
-
     if (evt.srcElement.id == "json") {
 
-        var nodeConsole = require('console');
-        var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-        myConsole.log('\x1b[34m%s\x1b[0m', 'THIS IS HOW TO READ A FILE IN JS');
-        myConsole.log('\x1b[34m%s\x1b[0m', 'RIGHT KNOW I AM IN js_example.js');
+        console.log('\x1b[34m%s\x1b[0m', 'THIS IS HOW TO READ A FILE IN JS');
+        console.log('\x1b[34m%s\x1b[0m', 'RIGHT KNOW I AM IN js_example.js');
 
         ipc.send('openJsonFile');
 
     }
-
 }
-
-
-
-
-
-
-
-
-
 
 function launchPython(evt) {
 
     if (evt.srcElement.id == "htmlButtonPress") {
 
-        var nodeConsole = require('console');
-        var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-        myConsole.log('\x1b[34m%s\x1b[0m', 'PRINT BEFORE PYTHON EXEC FROM NODE.JS');
+        console.log('\x1b[34m%s\x1b[0m', 'PRINT BEFORE PYTHON EXEC FROM NODE.JS');
 
         // EXECUTION OF PYTHON
 
@@ -55,65 +33,38 @@ function launchPython(evt) {
 
         //this is a listener for peers output
         child.stdout.on('data', function(data) {
-            var nodeConsole = require('console');
-            var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-            myConsole.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
+
+            console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
         });
-
-
-
-
-
-
-
-
-
 
     } else if (evt.srcElement.id == "interact") {
 
-        var nodeConsole = require('console');
-        var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-        myConsole.log('\x1b[34m%s\x1b[0m', 'INTERACTION IN JS');
 
+        console.log('\x1b[34m%s\x1b[0m', 'INTERACTION IN JS');
         child.stdin.write("hello\n");
         //this is a listener for peers output
-        myConsole.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
-
-
-
-
-
-
-
-
-
-
+        console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
 
     } else {
 
-        var nodeConsole = require('console');
-        var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-        myConsole.log('\x1b[34m%s\x1b[0m', 'EXIT IN JS');
 
-        child.stdin.write("exit\n");
-        //this is a listener for peers output
-        myConsole.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
+        console.log('\x1b[34m%s\x1b[0m', 'EXIT IN JS');
+
+        child.stdin.write("exit\n"); //this is a listener for peers output
+        console.log('\x1b[36m%s\x1b[0m', 'PIPED FROM PYTHON PROGRAM: ' + data.toString());
 
         child.stdin.end();
 
-        var nodeConsole = require('console');
-        var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
-        myConsole.log('python terminated from js too');
-    }
 
+        console.log('python terminated from js too');
+    }
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
-
-    document.getElementById("htmlButtonPress").addEventListener("click", launchPython);
-    document.getElementById("interact").addEventListener("click", launchPython);
-    document.getElementById("exit").addEventListener("click", launchPython);
-
-    document.getElementById("json").addEventListener("click", jsonForSettingsUse);
-
+    console.log("pressed a button");
+    document.getElementById("start_code").addEventListener("click", launchPython);
+    document.getElementById("send_code").addEventListener("click", launchPython);
+    document.getElementById("stop_code").addEventListener("click", launchPython);
+    document.getElementById("open_file").addEventListener("click", jsonForSettingsUse);
 })
