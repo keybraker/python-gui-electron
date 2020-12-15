@@ -18,8 +18,8 @@ electron
 ```
 
 Essentially no network is being created only one terminal is used when electron is launched and than from 
-within js ( electron ) a python program is initiated as a subprocess. These two programs than communicate via
-the terminal with js talking to python and python answering the requests which js listens too.
+within javascript ( electron ) a python program is initiated as a subprocess.
+These two programs than communicate via standart streams.
 
 ## Structure of example
 
@@ -55,7 +55,7 @@ the terminal with js talking to python and python answering the requests which j
    ```
    ( if you don't have npm installed use this [link](https://nodejs.org/en/download/) to download it. )
 
-2. Clone this repository with ( or download zip ):
+2. Clone this repository:
    ```
    git clone https://github.com/keybraker/electron-GUI-for-python.git
    ```
@@ -76,35 +76,35 @@ A page should spawn looking as follows:
 
 Then, press: 
 ```
-LAUNCH PYTHON CODE
+LAUNCH PROGRAM
 ~ this will launch a python application with a loop inside,
   that is waiting for data to be send from js
 ```
 
 Afterwards press: 
 ```
-INTERACT WITH PYTHON CODE
+INTERACT WITH PROGRAM
 ~ this will send a message named "hello" from js to python
   and python will read it and print a message
 ```
+
 And in the end press 
 ```
-TERMINATE PYTHON CODE
-~ finally js will send a termination message "exit" to python
-  and python will terminate and then js will terminate python
-  so that no processes run in the backround
+TERMINATE PROGRAM
+~ a termination message ("terminate") is sent to the program which knows
+to stop the loop and execution
 ```
-Also if you want to access externals files
-there is one more example
+
+Also if you want to access externals files there is one more example
 ```
 HOW TO OPEN A FILE
-~ from jsExample.js an ipc.send message is sent to the main.js
+~ from js_example.js an ipc.send message is sent to the main.js
   which will then read and output config.json's values.
   (This is a very fast and usefull feature to store settings)
 ```
 ## Interpretation Guide
 
-After that you should open jsExample.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
+After that you should open js_example.js and pythonExample.js in order to see how the example works and what triggered every message you see in your terminal.
 
 ## Authors
 

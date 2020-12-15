@@ -4,25 +4,22 @@ import sys
 
 
 def my_print(str):
-	print('Python:     ' + str)
-
-def start():
-	my_print('Spawned from within electron (js)')
-
-def respond(line):
-	my_print('I got string: "' + line + '", from electron (js)')
-
-def terminate():
-	my_print('I got a terminate request from electron (js)...terminating')
-	exit()
+    print('Python:     ' + str)
 
 
 # CODE
 
-start()
+my_print('Spawned from within electron (js)')
 
 while True:
     line = sys.stdin.readline()
+    print('GOT=>'+line+"<=")
+
     if line == "terminate":
-        terminate()
-    respond(line)
+        my_print('I got a terminate request from electron (js)...terminating')
+        exit(0)
+    elif line == "interaction_message":
+        my_print('I got string: "' + "interaction_message" +
+                 '", from electron (js)')
+    else:
+        print('no clue')
