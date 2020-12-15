@@ -9,13 +9,11 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         width: 700,
         height: 900,
-        maxWidth: 1280,
-        minWidth: 480,
-        maxHeight: 960,
-        minHeight: 360,
+        resizable: true,
         webPreferences: {
             preload: path.join(__dirname, 'gui_example.js'),
-            // nodeIntegration: true
+            contextIsolation: true
+                // nodeIntegration: true
         }
     })
 
@@ -86,5 +84,4 @@ ipcMain.on('openJsonFile', () => {
     console.log('\x1b[33m%s\x1b[0m', 'C_MODE = ' + json.C_MODE);
     console.log('\x1b[33m%s\x1b[0m', 'D_MODE = ' + json.D_MODE);
     console.log('');
-
 });
