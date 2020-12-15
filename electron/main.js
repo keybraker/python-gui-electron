@@ -26,7 +26,7 @@ function createWindow() {
     })
 
     // and load the index.html of the app.
-    mainWindow.loadFile('gui_example.html');
+    mainWindow.loadFile('./electron/gui_example.html');
 
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()

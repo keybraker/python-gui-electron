@@ -22,7 +22,7 @@ function send_to_program(str) {
 function start_code_function(evt) {
     print_both('Initiating program');
 
-    child = exec("python -i python_example.py ", function(error, stdout, stderr) {
+    child = exec("python -i ./external_programs/python_example.py ", function(error, stdout, stderr) {
         if (error !== null) {
             print_both('exec error: ' + error);
         }

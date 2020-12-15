@@ -4,7 +4,7 @@ import sys
 
 
 def my_print(str):
-    print('Python:     ' + str)
+    print('python-output(' + str + ')')
 
 
 # CODE
@@ -13,13 +13,12 @@ my_print('Spawned from within electron (js)')
 
 while True:
     line = sys.stdin.readline()
-    print('GOT=>'+line+"<=")
 
     if line == "terminate":
         my_print('I got a terminate request from electron (js)...terminating')
         exit(0)
-    elif line == "interaction_message":
-        my_print('I got string: "' + "interaction_message" +
-                 '", from electron (js)')
+    elif line == "":
+        my_print('Terminating as there is no data given...terminated')
+        exit(0)
     else:
-        print('no clue')
+        my_print('I got string: "' + line + '", from electron (js)')
