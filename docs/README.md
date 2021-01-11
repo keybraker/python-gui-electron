@@ -71,40 +71,43 @@ These two programs than communicate via standart streams.
 ## Execution Guide
 
 1. Open a terminal window and cd to cloned project
-```
-cd electron-GUI-for-python
-```
+   ```
+   cd electron-GUI-for-python
+   ```
 
 2. Initialize the elcetron aplication (first-time)
-```
-npm i
-```
+   ```
+   npm i
+   ```
 
 3. Run the electron application
-```
-npm start
-```
+   ```
+   npm start
+   ```
 
 4. A page should spawn looking as follows:
 
 ![alt text](../img/example.png)
 
-1. Press ```LAUNCH PROGRAM``` button
-> this will launch a python application with a loop inside,
-  that is waiting for data to be send from js
+1. Press __LAUNCH PROGRAM___ button
 
-2. Press ```INTERACT WITH PROGRAM``` button
-> this will send a message named "hello" from js to python
-  and python will read it and print a message
+   this will launch a python application with a loop inside,
+   that is waiting for data to be send from js
 
-3. Press ```TERMINATE PROGRAM``` button
-> a termination message ("terminate") is sent to the program which knows
-to stop the loop and execution
+2. Press __INTERACT WITH PROGRAM__ button
 
-4. Press ```HOW TO OPEN A FILE``` button
-> from ```electron/gui_example.js``` an ipc.send message is sent to the main.js
-  which will then read and output ```config.json``` values.
-  (This is a very fast and usefull feature to store settings)
+   this will send a message named "hello" from js to python
+   and python will read it and print a message
+
+3. Press __TERMINATE PROGRAM__ button
+
+   a termination message ("terminate") is sent to the program which knows
+   to stop the loop and execution
+
+4. Press __HOW TO OPEN A FILE__ button
+
+   from ```electron/gui_example.js``` an ipc.send message is sent to the main.js
+   which will then read and output `config.json` values (fast feature to store settings).
 
 ### Interpretation Guide
 
