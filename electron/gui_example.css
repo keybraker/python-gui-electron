@@ -27,18 +27,13 @@ a {
     text-decoration: none
 }
 
-.login-wrap {
-    width: 100%;
-    margin: auto;
-    max-width: 800px;
-    min-height: 400px;
-}
+
 
 .login-html {
     width: 100%;
     height: 100%;
     position: absolute;
-    padding: 90px 70px 50px 70px;
+    padding: 60px 60px 60px 60px;
     background: rgba(40, 57, 101, .9);
 }
 
