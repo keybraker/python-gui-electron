@@ -30,7 +30,7 @@ These two programs than communicate via standard streams.
 │   └── LICENSE
 |
 ├── img
-│   └── example.png
+│   └── screenshot.png
 |
 ├── guiExample.html
 ├── guiExample.css
@@ -46,6 +46,7 @@ These two programs than communicate via standard streams.
 ## Prerequisites
 
 Install Node.js and Python.
+
 > ote that installation may be different for different operating systems
 
 ## Installation Guide
@@ -89,7 +90,7 @@ Install Node.js and Python.
 
 4. A page should spawn looking as follows:
 
-![alt text](../img/example.png)
+![alt text](../img/screenshot.png)
 
 1. Press **LAUNCH PROGRAM\_** button
 
