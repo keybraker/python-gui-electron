@@ -13,10 +13,6 @@ function print_both(str) {
 }
 
 function createWindow() {
-  console.log(
-    'path.join(__dirname, "guiExample.js") :>> ',
-    path.join(__dirname, "guiExample.js")
-  );
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 990,
@@ -25,12 +21,13 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, "guiExample.js"),
       contextIsolation: true,
-      // nodeIntegration: true
+      nodeIntegration: true
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile("./electron/guiExample.html");
+  // mainWindow.loadFile("./electron/guiExample.html");
+  mainWindow.loadFile(path.join(__dirname, "guiExample.html"));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
