@@ -121,7 +121,8 @@ Important functionality can be found in files `electron/guiExample.js` where the
 - **Ioannis Tsiakkas** - _(Keybraker)_ - [Keybraker](https://github.com/keybraker)
 
 [![Python 2 Version](https://img.shields.io/badge/Python-2.7.16-green.svg)](https://www.python.org/downloads/)
-[![Python 3 Version](https://img.shields.io/badge/Python-3.9.1-green.svg)](https://www.python.org/download/releases/3.0/)
-[![Electron Version](https://img.shields.io/badge/electron-v23.1.0-green.svg)](https://electron.atom.io)
+[![Python 3 Version](https://img.shields.io/badge/Python-3.11.3-green.svg)](https://www.python.org/download/releases/3.0/)
+[![Electron Version](https://img.shields.io/badge/electron-v23.3.0-green.svg)](https://electron.atom.io)
+[![Windows](https://img.shields.io/badge/Windows-v11-green.svg)](https://www.apple.com/lae/macos/big-sur/)
 [![OSX Version](https://img.shields.io/badge/OS%20X-v13.1-green.svg)](https://www.apple.com/lae/macos/big-sur/)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.0.4-green.svg)](https://ubuntu.com)
