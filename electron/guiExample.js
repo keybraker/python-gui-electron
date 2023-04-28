@@ -26,7 +26,7 @@ function start_code_function(evt) {
   print_both("Initiating program");
 
   child = exec(
-    "python -i ./external_programs/python_example.py ",
+    "python -i ./python/pythonExample.py ",
     function (error, stdout, stderr) {
       if (error !== null) {
         print_both("exec error: " + error);
@@ -59,7 +59,7 @@ function stop_code_function(evt) {
 
 // requests main.js to open a file from the filesystem
 function open_file_function(evt) {
-  print_both("From gui_example.js sending a request to main.js via ipc");
+  print_both("From guiExample.js sending a request to main.js via ipc");
   ipc.send("open_json_file");
 }
 

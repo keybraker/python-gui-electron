@@ -32,12 +32,12 @@ These two programs than communicate via standard streams.
 ├── img
 │   └── example.png
 |
-├── gui_example.html
-├── gui_example.css
-├── gui_example.js
+├── guiExample.html
+├── guiExample.css
+├── guiExample.js
 ├── main.js
 │
-├── python_example.py
+├── pythonExample.py
 |
 ├── config.json
 └── package.json
@@ -107,12 +107,12 @@ Install nodeJS and Python, note that installation may be different for different
 
 4. Press **HOW TO OPEN A FILE** button
 
-   from `electron/gui_example.js` an ipc.send message is sent to the main.js
+   from `electron/guiExample.js` an ipc.send message is sent to the main.js
    which will then read and output `config.json` values (fast feature to store settings).
 
 ### Interpretation Guide
 
-Important functionality can be found in files `electron/gui_example.js` where the core of electron is. Listeners are implemented there awaiting for click events to trigger initialization of program, communication and termination. The program `external_programs/python_example.py` which is the external or 3rd party application that electron calls, is a simple for-loop awaiting commands. It responds to commands and terminates when sent an empty string, "terminate" or by pressing the terminate program button.
+Important functionality can be found in files `electron/guiExample.js` where the core of electron is. Listeners are implemented there awaiting for click events to trigger initialization of program, communication and termination. The program `python/pythonExample.py` which is the external or 3rd party application that electron calls, is a simple for-loop awaiting commands. It responds to commands and terminates when sent an empty string, "terminate" or by pressing the terminate program button.
 
 ## Authors
 

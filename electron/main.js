@@ -19,14 +19,14 @@ function createWindow() {
     height: 500,
     resizable: true,
     webPreferences: {
-      preload: path.join(__dirname, "gui_example.js"),
+      preload: path.join(__dirname, "guiExample.js"),
       contextIsolation: true,
       // nodeIntegration: true
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile("./electron/gui_example.html");
+  mainWindow.loadFile("./electron/guiExample.html");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -80,7 +80,7 @@ ipcMain.on("open_json_file", () => {
   var data = fs.readFileSync(fileName);
   var json = JSON.parse(data);
 
-  print_both("Called through ipc.send from gui_example.js");
+  print_both("Called through ipc.send from guiExample.js");
   print_both(
     "Data from config.json:\nA_MODE = " +
       json.A_MODE +

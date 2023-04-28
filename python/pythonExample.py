@@ -2,10 +2,8 @@ import sys
 
 # FUNCTIONS
 
-
 def my_print(str):
     print('python-output(' + str + ')')
-
 
 # CODE
 
