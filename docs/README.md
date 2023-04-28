@@ -43,6 +43,10 @@ These two programs than communicate via standard streams.
 └── package.json
 ```
 
+## Prerequisites
+
+Install nodeJS and Python, note that installation may be different for different operating systems
+
 ## Installation Guide
 
 1. To download and install [electron](https://electron.atom.io) ( OS X or Linux ) you have to download it from [npm-electron](https://www.npmjs.com/package/electron) using :
@@ -59,7 +63,7 @@ These two programs than communicate via standard streams.
 
 2. Clone this repository:
    ```
-   git clone https://github.com/keybraker/electron-GUI-for-python.git
+   git clone https://github.com/keybraker/python-gui-electron.git
    ```
 
 ## Execution Guide
@@ -67,7 +71,7 @@ These two programs than communicate via standard streams.
 1. Open a terminal window and cd to cloned project
 
    ```
-   cd electron-GUI-for-python
+   cd python-GUI-electron
    ```
 
 2. Initialize the electron application (first-time)
