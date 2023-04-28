@@ -1,5 +1,16 @@
-const ipc = require("electron").ipcRenderer;
-// const exec = require('child_process').exec;
+let i = 0;
+console.log("guiExample.js loaded, " + i);
+
+const { ipcRenderer } = require("electron");
+ipcRenderer.send("run-command", "ls");
+ipcRenderer.on("run-command-result", (event, result) => {
+  if (result.error) {
+    console.error("Error:", result.error);
+  } else {
+    console.log("Output:", result.output);
+  }
+});
+
 const exec = require("child_process").exec;
 
 var nodeConsole = require("console");
@@ -45,12 +56,12 @@ function start_code_function(evt) {
 // sends data to program
 function send_code_function(evt) {
   let string_to_send = document.getElementById("string_to_send").value;
-  print_both('Sending "' + string_to_send + '" to program:');
+  print_both('Sending "' + string_to_send + '" to program');
   send_to_program(string_to_send);
 }
 
 // sends termination message to python program and closed stream
-// that recieves information from it
+// that receives information from it
 function stop_code_function(evt) {
   print_both("Terminated program");
   send_to_program("terminate");
@@ -60,7 +71,7 @@ function stop_code_function(evt) {
 // requests main.js to open a file from the filesystem
 function open_file_function(evt) {
   print_both("From guiExample.js sending a request to main.js via ipc");
-  ipc.send("open_json_file");
+  ipcRenderer.send("open_json_file");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
