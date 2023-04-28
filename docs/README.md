@@ -45,7 +45,8 @@ These two programs than communicate via standard streams.
 
 ## Prerequisites
 
-Install nodeJS and Python, note that installation may be different for different operating systems
+Install Node.js and Python.
+> ote that installation may be different for different operating systems
 
 ## Installation Guide
 
@@ -71,7 +72,7 @@ Install nodeJS and Python, note that installation may be different for different
 1. Open a terminal window and cd to cloned project
 
    ```
-   cd python-GUI-electron
+   cd python-gui-electron
    ```
 
 2. Initialize the electron application (first-time)
