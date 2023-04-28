@@ -4,7 +4,8 @@ import sys
 
 
 def my_print(str):
-    print('python-output(' + str + ')')
+    print('Python    : "' + str + '"', flush=True)  # Add flush=True here
+
 
 # CODE
 
@@ -12,7 +13,7 @@ def my_print(str):
 my_print('Spawned from within electron (js)')
 
 while True:
-    line = sys.stdin.readline()
+    line = sys.stdin.readline().strip()
 
     if line == "terminate":
         my_print('I got a terminate request from electron (js)...terminating')

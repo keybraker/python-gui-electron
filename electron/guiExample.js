@@ -1,7 +1,7 @@
-let i = 0;
-console.log("guiExample.js loaded, " + i);
-
+const exec = require("child_process").exec;
+const nodeConsole = require("console");
 const { ipcRenderer } = require("electron");
+
 ipcRenderer.send("run-command", "ls");
 ipcRenderer.on("run-command-result", (event, result) => {
   if (result.error) {
@@ -11,15 +11,12 @@ ipcRenderer.on("run-command-result", (event, result) => {
   }
 });
 
-const exec = require("child_process").exec;
-
-var nodeConsole = require("console");
-var my_console = new nodeConsole.Console(process.stdout, process.stderr);
-var child;
+const terminalConsole = new nodeConsole.Console(process.stdout, process.stderr);
+let child;
 
 function print_both(str) {
   console.log("Javascript: " + str);
-  my_console.log("Javascript: " + str);
+  terminalConsole.log("Javascript: " + str);
 }
 
 function send_to_program(str) {
