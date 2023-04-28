@@ -13,10 +13,14 @@ function print_both(str) {
 }
 
 function createWindow() {
+  console.log(
+    'path.join(__dirname, "guiExample.js") :>> ',
+    path.join(__dirname, "guiExample.js")
+  );
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 620,
-    height: 500,
+    width: 990,
+    height: 600,
     resizable: true,
     webPreferences: {
       preload: path.join(__dirname, "guiExample.js"),
@@ -29,7 +33,7 @@ function createWindow() {
   mainWindow.loadFile("./electron/guiExample.html");
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
