@@ -2,6 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';"
+    />
     <title>Electron-Python Interaction</title>
     <link rel="stylesheet" href="guiExample.css" />
   </head>
@@ -9,7 +13,11 @@
   <body>
     <div class="container">
       <button id="start_code">Launch program</button>
-      <input id="string_to_send" type="text" placeholder="Enter the string to send to program" />
+      <input
+        id="string_to_send"
+        type="text"
+        placeholder="Enter the string to send to program"
+      />
       <button id="send_code">Interact with program</button>
       <button id="stop_code">Terminate program</button>
       <button id="open_file">How to open a file</button>
