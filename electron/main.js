@@ -3,17 +3,17 @@ const { app, BrowserWindow, ipcMain, Notification } = require("electron");
 const exec = require("child_process").exec;
 const path = require("path");
 
-var nodeConsole = require("console");
-var my_console = new nodeConsole.Console(process.stdout, process.stderr);
-var child;
+const nodeConsole = require("console");
+const myConsole = new nodeConsole.Console(process.stdout, process.stderr);
+let child;
 
-function print_both(str) {
+function printBoth(str) {
   console.log("main.js:    " + str);
-  my_console.log("main.js:    " + str);
+  myConsole.log("main.js:    " + str);
 }
 
+// Create the browser window.
 function createWindow() {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 990,
     height: 600,
@@ -21,12 +21,11 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, "guiExample.js"),
       contextIsolation: true,
-      nodeIntegration: true
+      nodeIntegration: true,
     },
   });
 
-  // and load the index.html of the app.
-  // mainWindow.loadFile("./electron/guiExample.html");
+  // Load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "guiExample.html"));
 
   // Open the DevTools.
@@ -64,32 +63,27 @@ ipcMain.on("execute", (command) => {
   });
 });
 
-ipcMain.on("open_json_file", () => {
-  var fs = require("fs");
-  var fileName = "./config.json";
-  var file = require(fileName);
+ipcMain.on("open_json_file_sync", () => {
+  const fs = require("fs");
 
-  // Asynchronous read
-  // fs.readFile('config.json', function (err, data) {
-  //   if (err) {
-  //     return console.error(err);
-  //   }
-  //   console.log("Asynchronous read: " + data.toString());
-  // });
+  fs.readFile("config.json", function (err, data) {
+    if (err) {
+      return console.error(err);
+    }
+    printBoth("Called through ipc.send from guiExample.js");
+    printBoth("Asynchronous read: " + data.toString());
+  });
+});
 
-  // Synchronous read
-  var data = fs.readFileSync(fileName);
-  var json = JSON.parse(data);
+ipcMain.on("open_json_file_async", () => {
+  const fs = require("fs");
 
-  print_both("Called through ipc.send from guiExample.js");
-  print_both(
-    "Data from config.json:\nA_MODE = " +
-      json.A_MODE +
-      "\nB_MODE = " +
-      json.B_MODE +
-      "\nC_MODE = " +
-      json.C_MODE +
-      "\nD_MODE = " +
-      json.D_MODE
+  const fileName = "./config.json";
+  const data = fs.readFileSync(fileName);
+  const json = JSON.parse(data);
+
+  printBoth("Called through ipc.send from guiExample.js");
+  printBoth(
+    `Data from config.json:\nA_MODE = ${json.A_MODE}\nB_MODE = ${json.B_MODE}\nC_MODE = ${json.C_MODE}\nD_MODE = ${json.D_MODE}`
   );
 });
