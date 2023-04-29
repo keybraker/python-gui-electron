@@ -29,8 +29,8 @@ These two programs than communicate via standard streams.
 │   ├── README.md
 │   └── LICENSE
 |
-├── img
-│   └── screenshot.png
+├── images
+│   └── ...
 |
 ├── guiExample.html
 ├── guiExample.css
@@ -90,7 +90,7 @@ Install Node.js and Python.
 
 4. A page should spawn looking as follows:
 
-![alt text](../img/screenshot.png)
+![alt text](../images/screenshot_2.png)
 
 1. Press **LAUNCH PROGRAM\_** button
 
