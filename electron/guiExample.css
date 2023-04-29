@@ -1,177 +1,71 @@
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+    font-family: "Roboto", sans-serif;
+    background-color: #F5F5F5;
+    color: #212121;
 }
 
-*,
-:after,
-:before {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 300;
+    color: #3C4043;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #212121;
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    outline: none;
     box-sizing: border-box;
+    transition: all 0.3s;
 }
 
-.clearfix:after,
-.clearfix:before {
-    content: "";
-    display: table;
+input[type="text"]:focus {
+    border: 1px solid #4285F4;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.3);
 }
 
-.clearfix:after {
-    clear: both;
-    display: block;
+button {
+    width: 100%;
+    max-width: 300px;
+    background-color: #4285F4;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0754b8;
 }
 
 a {
-    color: inherit;
+    color: #4285F4;
     text-decoration: none;
 }
 
-.login-wrap {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-html {
-    width: 400px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-}
-
-.login-html .sign-in-htm,
-.login-html .sign-up-htm {
-    display: none;
-}
-
-.login-html .tab {
-    font-size: 22px;
-    margin-right: 15px;
-    padding-bottom: 5px;
-    margin: 0 15px 10px 0;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.login-html .sign-in:checked+.tab,
-.login-html .sign-up:checked+.tab {
-    color: #1161ee;
-    border-bottom: 2px solid #1161ee;
-}
-
-.login-form {
-    position: relative;
-}
-
-.login-form .group {
-    margin-bottom: 15px;
-}
-
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button {
-    width: 100%;
-    color: #6a6f8c;
-    display: block;
-}
-
-.login-form .group .input,
-.login-form .group .button {
-    border: none;
-    padding: 15px 20px;
-    border-radius: 25px;
-    background: #f1f1f1;
-}
-
-.login-form .group input[data-type="password"] {
-    text-security: circle;
-    -webkit-text-security: circle;
-}
-
-.login-form .group .label {
-    color: #aaa;
-    font-size: 12px;
-}
-
-.login-form .group .button {
-    background: #1161ee;
-    color: #fff;
-}
-
-.input-container {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.input-container label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 16px;
-    color: #6a6f8c;
-    pointer-events: none;
-    transition: all 0.5s ease-in-out;
-}
-
-.input-container input {
-    border: 0;
-    border-bottom: 1px solid #555;
-    background: transparent;
-    width: 100%;
-    padding: 8px 0 5px 0;
-    font-size: 16px;
-    color: #6a6f8c;
-}
-
-.input-container input:focus {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #1161ee;
-}
-
-.input-container input:focus+label {
-    top: -20px;
-    font-size: 12px;
-    color: #1161ee;
-}
-
-.foot-lnk {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.foot-lnk a {
-    color: #1161ee;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.foot-lnk a:hover {
-    color: #6a82fb;
-}
-
-.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm,
-.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
-    display: block;
-}
-
-.hr {
-    height: 2px;
-    margin: 30px 0;
-    background: rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive design */
-@media screen and (max-width: 480px) {
-    .login-wrap {
-        padding: 30px;
-    }
-
-    .login-html {
-        width: 100%;
-        padding: 20px;
-    }
+a:hover {
+    color: #2B7DE9;
+    text-decoration: underline;
 }
